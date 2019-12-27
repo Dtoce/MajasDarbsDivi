@@ -98,7 +98,7 @@ class AtminasSpele {
 
         for (let i=1; i<=this.kartinuMasivs.length; i++) {
             let karte = document.createElement("div");
-            karte.innerHTML = `<img src="{{ url_for('static', filename='img/smaids-0.png') }}/>`;
+            karte.innerHTML = "<img src='/static/img/smaids-0.png' />";
             karte.setAttribute("class","spele-karte");
             karte.setAttribute("id", "kartina" + i);
             karte.vertiba=this.kartinuMasivs[i-1];
@@ -118,7 +118,7 @@ class AtminasSpele {
             }
 
             kartina.classList.add("open");
-            kartina.innerHTML="<img src='img/smaids-" + kartina.vertiba + ".png'/>";
+            kartina.innerHTML="<img src='/static/img/smaids-" + kartina.vertiba + ".png'/>";
 
             if(this.RedzamoSkaits===0){
                 this.PirmaKarts=id;
@@ -171,7 +171,7 @@ class AtminasSpele {
     aizvertKarti(id){
         let karts=document.getElementById("kartina"+id);
         karts.classList.remove("open");
-        karts.innerHTML = "<img src='img/smaids-0.png'/>";
+        karts.innerHTML = "<img src='/static/img/smaids-0.png'/>";
 
         console.log("aizver",id);
         return;
